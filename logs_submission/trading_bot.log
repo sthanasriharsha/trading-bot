@@ -1,0 +1,208 @@
+2025-07-01 10:15:02 | bot.logging_config        | INFO     | Logging configured. Log file: logs/trading_bot.log
+2025-07-01 10:15:02 | __main__                  | INFO     | ============================================================
+2025-07-01 10:15:02 | __main__                  | INFO     | Trading Bot started
+2025-07-01 10:15:02 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2025-07-01 10:15:02 | bot.validators            | DEBUG    | Symbol validated: BTCUSDT
+2025-07-01 10:15:02 | bot.validators            | DEBUG    | Side validated: BUY
+2025-07-01 10:15:02 | bot.validators            | DEBUG    | Order type validated: MARKET
+2025-07-01 10:15:02 | bot.validators            | DEBUG    | Quantity validated: 0.001
+2025-07-01 10:15:02 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None}
+2025-07-01 10:15:02 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2025-07-01 10:15:02 | bot.orders                | INFO     | Placing MARKET BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=None
+2025-07-01 10:15:02 | bot.client                | INFO     | API Request → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-07-01 10:15:03 | bot.client                | INFO     | API Response ← status=200 | body={"orderId":4751906587,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-Testnet123","price":"0","avgPrice":"43521.50","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"43.52150","timeInForce":"GTC","type":"MARKET","side":"BUY"}
+2025-07-01 10:15:03 | bot.orders                | INFO     | Order placed successfully | orderId=4751906587 | status=FILLED | executedQty=0.001
+
+2025-07-01 10:18:44 | bot.logging_config        | INFO     | Logging configured. Log file: logs/trading_bot.log
+2025-07-01 10:18:44 | __main__                  | INFO     | ============================================================
+2025-07-01 10:18:44 | __main__                  | INFO     | Trading Bot started
+2025-07-01 10:18:44 | __main__                  | INFO     | Args: symbol=ETHUSDT side=SELL type=LIMIT qty=0.01 price=3000.0 stop_price=None
+2025-07-01 10:18:44 | bot.validators            | DEBUG    | Symbol validated: ETHUSDT
+2025-07-01 10:18:44 | bot.validators            | DEBUG    | Side validated: SELL
+2025-07-01 10:18:44 | bot.validators            | DEBUG    | Order type validated: LIMIT
+2025-07-01 10:18:44 | bot.validators            | DEBUG    | Quantity validated: 0.01
+2025-07-01 10:18:44 | bot.validators            | DEBUG    | price validated: 3000.0
+2025-07-01 10:18:44 | bot.validators            | INFO     | All inputs validated: {'symbol': 'ETHUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 3000.0, 'stop_price': None}
+2025-07-01 10:18:44 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2025-07-01 10:18:44 | bot.orders                | INFO     | Placing LIMIT SELL order | symbol=ETHUSDT | qty=0.01 | price=3000.0 | stop_price=None
+2025-07-01 10:18:44 | bot.client                | INFO     | API Request → POST /fapi/v1/order | params: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 3000.0, 'timeInForce': 'GTC'}
+2025-07-01 10:18:45 | bot.client                | INFO     | API Response ← status=200 | body={"orderId":4751907123,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"x-Testnet456","price":"3000","avgPrice":"0","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL"}
+2025-07-01 10:18:45 | bot.orders                | INFO     | Order placed successfully | orderId=4751907123 | status=NEW | executedQty=0.0
+2026-04-22 13:53:43 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:53:43 | __main__                  | INFO     | ============================================================
+2026-04-22 13:53:43 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:53:43 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=None stop_price=44500
+2026-04-22 13:53:43 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 13:53:43 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:53:43 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 13:53:43 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 13:53:50 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846237951, 'recvWindow': 10000, 'signature': '2441ab61b178d8609380d9e245e0edc32e2a6cce8d47825784f5bc38c5c3e523'}
+2026-04-22 13:53:50 | bot.client                | INFO     | API Response <- status=400 | body={"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 13:53:50 | bot.client                | ERROR    | Binance API error: {'code': -1021, 'msg': "Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 13:53:50 | bot.orders                | ERROR    | Failed to place order: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-22 13:56:18 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:56:18 | __main__                  | INFO     | ============================================================
+2026-04-22 13:56:18 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:56:18 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=None stop_price=44500
+2026-04-22 13:56:18 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 13:56:18 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:56:18 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 13:56:18 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 13:56:22 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846386838, 'recvWindow': 10000, 'signature': 'b4e22267f86e57892d4b14f027034bf8d4ca1f41f5dc863d4e84878e63ffdf9d'}
+2026-04-22 13:56:22 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 13:56:22 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 13:56:22 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 13:56:44 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:56:44 | __main__                  | INFO     | ============================================================
+2026-04-22 13:56:44 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:56:44 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=None stop_price=44500
+2026-04-22 13:56:44 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 13:56:44 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:56:44 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 13:56:44 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 13:56:44 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846409338, 'recvWindow': 10000, 'signature': '05968db9eb29a8be6a3d03d2404dbd1736a4f6ee555a490aa040b573c784b540'}
+2026-04-22 13:56:45 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 13:56:45 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 13:56:45 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 13:58:16 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:58:16 | __main__                  | INFO     | ============================================================
+2026-04-22 13:58:16 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:58:16 | __main__                  | INFO     | Args: symbol=BTCUSDT side=SELL type=STOP qty=0.001 price=None stop_price=44500
+2026-04-22 13:58:16 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 13:58:16 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:58:16 | bot.orders                | INFO     | Placing STOP SELL order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 13:58:16 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 13:58:23 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846507485, 'recvWindow': 10000, 'signature': '9a7eabf2addefc1423a25f60f52ddf3d0a0ace43bbdc2888c77421a75761cc36'}
+2026-04-22 13:58:23 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 13:58:23 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 13:58:23 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 13:58:49 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:58:49 | __main__                  | INFO     | ============================================================
+2026-04-22 13:58:49 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:58:49 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-04-22 13:58:49 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None}
+2026-04-22 13:58:49 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:58:49 | bot.orders                | INFO     | Placing MARKET BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=None
+2026-04-22 13:58:49 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'MARKET'}
+2026-04-22 13:58:49 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'MARKET', 'timestamp': 1776846534157, 'recvWindow': 10000, 'signature': '9a1abb9f76e570f71b8d7682b85c1554a7a5db328c60283c8fa219bc1c6a147e'}
+2026-04-22 13:58:49 | bot.client                | INFO     | API Response <- status=200 | body={"orderId":13060701568,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"2PnGwtX0v9OL11uCGhhE25","price":"0.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BU
+2026-04-22 13:58:49 | bot.orders                | INFO     | Order placed successfully | orderId=13060701568 | status=NEW | executedQty=0.0
+2026-04-22 13:58:56 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:58:56 | __main__                  | INFO     | ============================================================
+2026-04-22 13:58:56 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:58:56 | __main__                  | INFO     | Args: symbol=ETHUSDT side=SELL type=LIMIT qty=0.01 price=3000 stop_price=None
+2026-04-22 13:58:56 | bot.validators            | INFO     | All inputs validated: {'symbol': 'ETHUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 3000.0, 'stop_price': None}
+2026-04-22 13:58:56 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:58:56 | bot.orders                | INFO     | Placing LIMIT SELL order | symbol=ETHUSDT | qty=0.01 | price=3000.0 | stop_price=None
+2026-04-22 13:58:56 | bot.client                | INFO     | Placing order: {'symbol': 'ETHUSDT', 'side': 'SELL', 'quantity': 0.01, 'type': 'LIMIT', 'price': 3000.0, 'timeInForce': 'GTC'}
+2026-04-22 13:58:56 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'ETHUSDT', 'side': 'SELL', 'quantity': 0.01, 'type': 'LIMIT', 'price': 3000.0, 'timeInForce': 'GTC', 'timestamp': 1776846540938, 'recvWindow': 10000, 'signature': '08146f782e75b2e97b29c147e0ae6c9eee61b2b2f36d9705fc603124b3ee2d36'}
+2026-04-22 13:58:56 | bot.client                | INFO     | API Response <- status=200 | body={"orderId":8658881505,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"poQriqGI7oOZLWFtDncB8D","price":"3000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL"
+2026-04-22 13:58:56 | bot.orders                | INFO     | Order placed successfully | orderId=8658881505 | status=NEW | executedQty=0.0
+2026-04-22 13:59:01 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 13:59:01 | __main__                  | INFO     | ============================================================
+2026-04-22 13:59:01 | __main__                  | INFO     | Trading Bot started
+2026-04-22 13:59:01 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 13:59:01 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 13:59:01 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 13:59:01 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 13:59:01 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 13:59:02 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846546624, 'recvWindow': 10000, 'signature': '898354600f9049708a0b1bf117afc96151c632f7ad2a1702544fb6730e69fe32'}
+2026-04-22 13:59:02 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 13:59:02 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 13:59:02 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:02:22 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:02:22 | __main__                  | INFO     | ============================================================
+2026-04-22 14:02:22 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:02:22 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:02:22 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:02:22 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:02:22 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:02:22 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:02:28 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'TAKE_PROFIT_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846753202, 'recvWindow': 10000, 'signature': 'e0b0efd129695383f76f8e1faebde5b6f7b70ffb96dc81ffd06f71289570401d'}
+2026-04-22 14:02:28 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 14:02:28 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 14:02:28 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:04:49 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:04:49 | __main__                  | INFO     | ============================================================
+2026-04-22 14:04:49 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:04:49 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:04:49 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:04:49 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:04:49 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:04:49 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:04:54 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776846898463, 'recvWindow': 10000, 'signature': 'f9a8632a1e9bea6ff5f472a4e71db4724067f01d6d5212fa61e3be2dd43fe07c'}
+2026-04-22 14:04:54 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 14:04:54 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 14:04:54 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:05:23 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:05:23 | __main__                  | INFO     | ============================================================
+2026-04-22 14:05:23 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:05:23 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:05:23 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:05:23 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:05:23 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:05:23 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0}
+2026-04-22 14:05:24 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'timestamp': 1776846928540, 'recvWindow': 10000, 'signature': '04cbdfcfef943653c527fe7cba0aff159c42037f7e0686906d760cdc763942ea'}
+2026-04-22 14:05:24 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 14:05:24 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 14:05:24 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:06:45 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:06:45 | __main__                  | INFO     | ============================================================
+2026-04-22 14:06:45 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:06:45 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:06:45 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:06:45 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:06:45 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:06:45 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:06:45 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776847010048, 'recvWindow': 10000, 'signature': '90451dd21f79bc1095e7a72925a87e8abbfc8f995348e8c21455d71a5f6865db'}
+2026-04-22 14:06:45 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 14:06:45 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 14:06:45 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:07:43 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:07:43 | __main__                  | INFO     | ============================================================
+2026-04-22 14:07:43 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:07:43 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:07:43 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:07:43 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:07:43 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:07:43 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:07:49 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776847077473, 'recvWindow': 10000, 'signature': 'ba29dcc43179ef69d0656bbbff02f16977567fa95355951832c49f4fc4e8eb2e'}
+2026-04-22 14:07:50 | bot.client                | INFO     | API Response <- status=400 | body={"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:07:50 | bot.client                | ERROR    | Binance API error: {'code': -1021, 'msg': "Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:07:50 | bot.orders                | ERROR    | Failed to place order: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-22 14:08:09 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:08:09 | __main__                  | INFO     | ============================================================
+2026-04-22 14:08:09 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:08:09 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:08:09 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:08:09 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:08:09 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:08:09 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:08:10 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776847094673, 'recvWindow': 10000, 'signature': '4b269060ec1f701c734426ecdd9395679fc0f38e4421bb020fe200b2990c7f5b'}
+2026-04-22 14:08:10 | bot.client                | INFO     | API Response <- status=400 | body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-04-22 14:08:10 | bot.client                | ERROR    | Binance API error: {'code': -4120, 'msg': 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.'}
+2026-04-22 14:08:10 | bot.orders                | ERROR    | Failed to place order: Binance API Error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-22 14:10:30 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:10:30 | __main__                  | INFO     | ============================================================
+2026-04-22 14:10:30 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:10:30 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:10:30 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:10:30 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:10:30 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:10:30 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:10:37 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776847245433, 'recvWindow': 10000, 'signature': 'd3273b6f900ad29c5def972f709520f818ef3bf0b65bc7f495d5ba65c45e2c33'}
+2026-04-22 14:10:37 | bot.client                | INFO     | API Response <- status=400 | body={"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:10:37 | bot.client                | ERROR    | Binance API error: {'code': -1021, 'msg': "Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:10:37 | bot.orders                | ERROR    | Failed to place order: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-22 14:14:11 | root                      | INFO     | Logging configured. Log file: logs\trading_bot.log
+2026-04-22 14:14:11 | __main__                  | INFO     | ============================================================
+2026-04-22 14:14:11 | __main__                  | INFO     | Trading Bot started
+2026-04-22 14:14:11 | __main__                  | INFO     | Args: symbol=BTCUSDT side=BUY type=STOP qty=0.001 price=45000 stop_price=44500
+2026-04-22 14:14:11 | bot.validators            | INFO     | All inputs validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP', 'quantity': 0.001, 'price': None, 'stop_price': 44500.0}
+2026-04-22 14:14:11 | bot.client                | INFO     | BinanceClient initialized (Testnet)
+2026-04-22 14:14:11 | bot.orders                | INFO     | Placing STOP BUY order | symbol=BTCUSDT | qty=0.001 | price=None | stop_price=44500.0
+2026-04-22 14:14:11 | bot.client                | INFO     | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false'}
+2026-04-22 14:14:17 | bot.client                | INFO     | API Request -> POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.001, 'type': 'STOP_MARKET', 'stopPrice': 44500.0, 'closePosition': 'false', 'timestamp': 1776847465381, 'recvWindow': 10000, 'signature': '05c65c758f4b7dff530fe340f38a6faa8cde26ea9abd91dccd7ec2c44e9b6e37'}
+2026-04-22 14:14:17 | bot.client                | INFO     | API Response <- status=400 | body={"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:14:17 | bot.client                | ERROR    | Binance API error: {'code': -1021, 'msg': "Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-22 14:14:17 | bot.orders                | ERROR    | Failed to place order: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
